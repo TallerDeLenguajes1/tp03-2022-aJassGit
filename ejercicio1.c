@@ -5,7 +5,7 @@
 int main(int argc, char const *argv[])
 {
     char *buffer;
-    char *nombre;
+    char *nombre[5];
 
     buffer= (char *) malloc(100*sizeof(char));
     for(int i=0; i<5; i++)
