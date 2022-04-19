@@ -3,17 +3,17 @@
 #include <string.h>
 
 char *TiposProductos[]={“Galletas”,”Snack”,”Cigarrillos”,”Caramelos”,”Bebidas”};
-struct Producto {
+typedef struct Producto {
 int ProductoID; //Numerado en ciclo iterativo
 int Cantidad; // entre 1 y 10
 char *TipoProducto; // Algún valor del arreglo TiposProductos
 float PrecioUnitario; // entre 10 - 100
-};
+}Prod;
 struct Cliente {
 int ClienteID; // Numerado en el ciclo iterativo
 char *NombreCliente; // Ingresado por usuario
 int CantidadProductosAPedir; // (aleatorio entre 1 y 5)
-Producto *Productos //El tamaño de este arreglo depende de la variable
+Prod *Productos //El tamaño de este arreglo depende de la variable
 // “CantidadProductosAPedir”
 };
 
@@ -33,6 +33,11 @@ int main(int argc, char const *argv[])
         printf("Nombre del cliente (N°%i): ", i);
         gets(user_cliente);
         user_cliente[i] = (char*) malloc(100 * sizeof(char));
+        
+        printf("Producto { \n");
+        printf("    ProductoID: %i", Prod->ProductoID = rand(1,5));
+        printf("    Cantidad: %i", Prod->Cantidad = rand(1,10));
+        printf("    Tipo de Producto: %s", Prod->TipoProducto = gets(*));
 
     }
 
